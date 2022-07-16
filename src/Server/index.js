@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 // App
 const app = express();
 const http = require("http");
-const server = http.createServer(app);
+const server = http.createServer(app).listen(PORT);
 // Socket io
 const io = require("socket.io")(server, {
 	cors: {
@@ -59,10 +59,3 @@ io.on("connection", (socket) => {
 	messageInit(io, socket);
 	readStoryInit(io, socket);
 });
-
-// Server
-server.listen(PORT, (e,f) => {
-	console.log(e,f)
-	console.log(`Server is running on Port-${PORT}`);
-});
-
