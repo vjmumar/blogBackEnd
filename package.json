@@ -5,7 +5,8 @@
   "main": "/src/Server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/Server/index.js"
+    "start": "node ./src/Server/index.js",
+    "mon":  "nodemon ./src/Server/index.js"
   },
   "author": "Hades",
   "license": "ISC",
